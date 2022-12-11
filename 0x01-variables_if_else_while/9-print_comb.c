@@ -1,24 +1,24 @@
 #include <stdio.h>
-/**
- * main - program that prints numbers from 0 to 99.
- * Return: 0
- */
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int num = 0;
+	int d;
 
-	while (num <= 99)
+	for (d = '0'; d <= '9'; d++)
 	{
-		putchar(num / 10 + '0');
-		putchar(num % 10 + '0');
-		if (num != 99)
+		putchar(d);
+		if (d != '9')
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		++num;
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+
+	return (0);
 }
